@@ -5,7 +5,6 @@ function espalindromo(palabras) {
   for (let letter of palabras) {
     palabraInvertida = letter + palabraInvertida;
   }
-  console.log(palabraInvertida);
   if (palabraInvertida === palabras) {
     return true;
   }
@@ -13,3 +12,5 @@ function espalindromo(palabras) {
 }
 
 module.exports = espalindromo;
+
+
