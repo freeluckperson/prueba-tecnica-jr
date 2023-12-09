@@ -1,4 +1,4 @@
-const sumaDePares = require("../pruebas/sumadePares");
+const sumaDePares = require("../pruebas/sumaDePares");
 
 describe("sumaDePares", () => {
   it("Test case 1: Array with even numbers", () => {
