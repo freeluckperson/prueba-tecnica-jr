@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for sumaDePares.js</title>
+    <title>Code coverage report for maxSum.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> sumaDePares.js</h1>
+        <h1><a href="index.html">All files</a> maxSum.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/17</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/17</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
@@ -79,7 +79,24 @@
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -92,19 +109,23 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">// Dado un array de numeros devolver la suma de numeros pares
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">//Max sum
+const highestSum = (array) =&gt; {
+  let menorSuma = array[0] + array[1];
+  for (let i = 0; i &lt; array.length - 1; i++) {
+    const mayorSuma = array[i] + array[i + 1];
+    if (mayorSuma &gt; menorSuma) {
+      menorSuma = mayorSuma;
+    }
+  }
+  return menorSuma;
+};
 &nbsp;
-const sumaDePares = (array) =&gt;
-  array.reduce((acc, elem) =&gt; (elem % 2 === 0 ? acc + elem : acc), 0);
+const arr = [0, 1, 5, 8];
+const arr1 = [5, 9, 10, 15, 4];
 &nbsp;
-/* eslint-disable */console.log(...oo_oo(`1207390124_6_0_6_35_4`,sumaDePares([1, 2, 4])));
-&nbsp;
-module.exports = sumaDePares;
-&nbsp;
-&nbsp;
+/* eslint-disable */console.log(...oo_oo(`2457118607_16_0_16_28_4`,highestSum(arr)));
+module.exports = highestSum;
 &nbsp;
 &nbsp;
 &nbsp;
