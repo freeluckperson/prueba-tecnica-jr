@@ -25,17 +25,22 @@ const cityList = [
   "Caracas",
   "Ciudad Bolivar",
   "Valera",
+  "Pto la Cruz",
   "Anaco",
   "Maracay",
   "Maturin",
   "Merida",
+  "Pto la Cruz",
   "Anaco",
   "Caracas",
   "Pto Ordaz",
+  "Caracas",
+  "Ciudad Bolivar",
   "Maturin",
   "Anaco",
   "Maracaibo",
   "Anaco",
+  "Caracas",
   "Pto la Cruz",
   "Maracaibo",
   "Maturin",
@@ -48,20 +53,21 @@ const cityList = [
 
 function occurCities(cityList) {
   const cities = {};
+
   for (const city of cityList) {
-    // cities[city] = (cities[city] || 0) + 1;
-    cities[city] = !cities[city] ? 1 : (cities[city] += 1);
+    cities[city] = !cities[city] ? 1 : cities[city] + 1;
   }
-  const toArray = Object.keys(cities).map((city) => {
-    return {
+
+  const toArray = Object.keys(cities)
+    .map(city => ({
       name: city,
       times: cities[city],
-    };
-  });
-  const order = toArray.sort((a, b) => b.times - a.times).slice(0, 5);
+    }))
+    .filter(city => city.times >= 3);
+
   let str = "";
-  for (const nameTimes of order) {
-    str += `${nameTimes.name} ${nameTimes.times}, `;
+  for (const city of toArray) {
+    str += `${city.name} ${city.times}, `;
   }
   return str;
 }
