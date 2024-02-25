@@ -5,12 +5,10 @@ function espalindromo(palabras) {
   for (let letter of palabras) {
     palabraInvertida = letter + palabraInvertida;
   }
-  if (palabraInvertida === palabras) {
-    return true;
-  }
-  return false;
+  
+  return palabraInvertida === palabras;
 }
 
+console.log(espalindromo("ottoa"));
+
 module.exports = espalindromo;
-
-

@@ -1,41 +1,28 @@
-const citiesList = [
-  "Barquisimeto",
-  "Maturin",
-  "Valera",
-  "Barquisimeto",
-  "Maturin",
-  "Anaco",
-  "Maturin",
-  "Anaco",
-  "Calabozo",
-  "Valera",
-  "Anaco",
-  "Maturin",
-  "Maracaibo",
-  "Maracai",
-  "Anaco",
-  "Maturin",
-  "Barquisimeto",
-  "Maturin",
-];
-function take3(citiesList) {
-  const obj = {};
-  for (let cities of citiesList) {
-    obj[cities] = !obj[cities] ? 1 : obj[cities] + 1;
-  }
+// const products = [
+//   { name: "cloro", price: 8, inOffer: true },
+//   { name: "champu", price: 6, inOffer: false },
+//   { name: "jabon", price: 4, inOffer: false },
+//   { name: "aceite", price: 8, inOffer: true },
+//   { name: "pasta", price: 3, inOffer: true },
+// ];
 
-  const toArray = Object.keys(obj)
-    .map((cities) => ({
-      ciudad: cities,
-      concurrencia: obj[cities],
-    }))
-    .filter((city) => city.concurrencia >= 3);
+// const discountedProducts = products.map((product) => {
+//   if (product.inOffer) {
+//     return { ...product, price: product.price - product.price * 0.09 };
+//   }
+//   return product;
+// });
 
-  let results = "";
-  for (const topCity of toArray) {
-    results += topCity.ciudad + " " + topCity.concurrencia + " ";
-  }
-  console.log(results);
-}
+// console.log(discountedProducts);
+// console.log(products);
 
-take3(citiesList);
+// Formatear fechas en javascript
+const format = (date, locale, options) =>
+  new Intl.DateTimeFormat(locale, options).format(date);
+
+const now = new Date();
+
+// console.log(format(now, "es"));
+// console.log(format(now, "en"));
+console.log(format(now, "es", { dateStyle: "long" }));
+// console.log(format(now, "es", { weekday: "short", day: "numeric" }));

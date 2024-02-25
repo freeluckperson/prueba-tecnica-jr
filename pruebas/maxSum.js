@@ -10,8 +10,17 @@ const highestSum = (array) => {
   return menorSuma;
 };
 
-const arr = [0, 1, 5, 8];
-const arr1 = [5, 9, 10, 15, 4];
+const arr = [10, 2, 3];
 
-console.log(highestSum(arr));
+console.log("1ra function →", highestSum(arr));
 module.exports = highestSum;
+
+const array = [10, 2, 3];
+let sum = array[0] + array[1];
+
+for (let i = 0; i < array.length; i++) {
+  for (let j = i + 1; j < array.length; j++) {
+    max = Math.max(sum, array[i] + array[j]);
+  }
+}
+console.log("2da function →", sum);
