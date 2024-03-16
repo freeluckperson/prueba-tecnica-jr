@@ -59,11 +59,11 @@ function occurCities(cityList) {
   }
 
   const toArray = Object.keys(cities)
-    .map(city => ({
+    .map((city) => ({
       name: city,
       times: cities[city],
     }))
-    .filter(city => city.times >= 3);
+    .filter((city) => city.times >= 3);
 
   let str = "";
   for (const city of toArray) {
@@ -73,3 +73,5 @@ function occurCities(cityList) {
 }
 
 console.log(occurCities(cityList));
+
+module.exports = { occurCities, cityList };

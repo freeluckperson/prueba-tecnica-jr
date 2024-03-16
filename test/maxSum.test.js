@@ -1,6 +1,5 @@
 const highestSum = require("../pruebas/maxSum");
 
-highestSum;
 describe("highestSum", () => {
   it("Should find largest sum of contiguous numbers", () => {
     const array = [0, 1, 5, 8];
