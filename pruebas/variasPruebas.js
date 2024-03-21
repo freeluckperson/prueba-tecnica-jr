@@ -58,6 +58,7 @@ function occurCities(cityList) {
     cities[city] = !cities[city] ? 1 : cities[city] + 1;
   }
 
+  
   const toArray = Object.keys(cities)
     .map((city) => ({
       name: city,
